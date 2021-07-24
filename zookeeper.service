@@ -1,0 +1,20 @@
+[Unit]
+
+Description=Zookeeper 
+
+After=network.target
+
+[Service]
+
+User=mikey
+
+WorkingDirectory=/home/mikey/Downloads/kafka_program/   
+
+ExecStart=/home/mikey/Downloads/kafka_program/bin/zookeeper-server-start.sh  /home/mikey/Downloads/kafka_program/config/zookeeper.properties
+
+Restart=on-abort
+
+[Install]
+
+WantedBy=multi-user.target
+                                                                                                                
